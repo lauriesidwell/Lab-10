@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title>Anguar 4 List</title>
+</head>
+<body>
+
+	  <div ng-app="myModule" ng-controller="myController">
+ 
+	  <h3>LAS To-Do List in alphabetical order</h3>
+	  <ul>
+	    <li ng-repeat="task in ToDoList | orderBy:task">Task: {{ task.task | filter}}, Day: {{task.day}}</li>
+	  </ul>
+	
+
+
+	<form style="width: 300px">
+	   <fieldset>
+	    <legend>Add Task</legend>
+	    Task one:<br>
+	    <input id="T1" type="text" name="taskOne" ng-model='newTask'><br><br>
+ 	    <input type="submit" value="Add Task" ng-click="addTask()" > 
+	   </fieldset>
+	 </form>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>	
+
+	<script src="app.js"></script>
+
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"
+
+	 <script src="lib/angular-route.js"></script>
+   
+</body>
+</html>
